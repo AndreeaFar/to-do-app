@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/theme.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body>
+    <main class="container">
+      <section class="main-section">
+        <header class="logo">
+          <p>T O D O</p>
+          <img
+            id="theme"
+            src="../assets/images/icon-sun.svg"
+            alt="header-image" />
+        </header>
+
+        <input
+          id="create-todo"
+          type="text"
+          placeholder="Create a new todo..." />
+
+        <div class="todo-list">
+          <ul class="list-item-wrapper">
+            <li class="todo-list-item">
+              <label class="checkbox-container"
+                >Jog around the park 3 times
+                <input class="remember" type="checkbox" checked />
+                <span class="checkmark"></span>
+                <button>
+                  <img
+                    class="delete-todo"
+                    src="../assets/images/icon-cross.svg"
+                    alt="" />
+                </button>
+              </label>
+            </li>
+
+            <li class="todo-list-item">
+              <label class="checkbox-container"
+                >Complete the TODO app from Frontend Mentor
+                <input class="remember" type="checkbox" checked />
+                <span class="checkmark"></span>
+                <button>
+                  <img
+                    class="delete-todo"
+                    src="../assets/images/icon-cross.svg"
+                    alt="" />
+                </button>
+              </label>
+            </li>
+
+            <li class="todo-list-item">
+              <label class="checkbox-container"
+                >Post on X the day 5 of #100DaysOfCode haha
+                <input class="remember" type="checkbox" />
+                <span class="checkmark"></span>
+                <button>
+                  <img
+                    class="delete-todo"
+                    src="../assets/images/icon-cross.svg"
+                    alt="" />
+                </button>
+              </label>
+            </li>
+          </ul>
+
+          <div class="todo-list-footer">
+            <span id="left-items"></span>
+            <div class="todo-list-filter">
+              <span class="filter-item" id="all">All</span>
+              <span class="filter-item" id="active">Active</span>
+              <span class="filter-item" id="completed">Completed</span>
+            </div>
+            <span class="clear-completed">Clear Completed</span>
+          </div>
+        </div>
+
+        <div class="todo-list-filter-mobile">
+          <span class="filter-item" id="all-mobile">All</span>
+          <span class="filter-item" id="active-mobile">Active</span>
+          <span class="filter-item" id="completed-mobile">Completed</span>
+        </div>
+      </section>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Andreea</a>.
+      </div>
+    </main>
+  </body>
+</html>

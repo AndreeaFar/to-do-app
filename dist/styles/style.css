@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Manrope:wght@200..800&display=swap');
+
+:root {
+  /* app colors */
+  --primary-blue: hsl(220, 98%, 61%);
+  --check-bg: linear-gradient(#57ddff, #c058f3);
+  --bg-dark: hsl(235, 21%, 11%);
+  --dark-blue: hsl(235, 24%, 19%);
+  --light-gray: hsl(234, 39%, 85%);
+  --light-gray-hover: hsl(236, 33%, 92%);
+  --dark-gray: hsl(234, 11%, 52%);
+  --very-dark-gray: hsl(233, 14%, 35%);
+  --very-dark-gray-hover: hsl(237, 14%, 26%);
+  --bg-light: hsl(236, 33%, 92%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --light-gray-light-theme: hsl(233, 11%, 84%);
+  --dark-gray-light-theme: hsl(236, 9%, 61%);
+  --very-dark-gray-light-theme: hsl(235, 19%, 35%);
+
+  /* Dark theme */
+  --mainBgColor-dark: var(--bg-dark);
+  --mainTextColor-dark: var(--light-gray);
+  --mainSectionBg-dark: var(--dark-blue);
+  --mainHeaderImageUrl-dark: url('../../assets/images/bg-desktop-dark.jpg');
+  --mainHeaderMobileImageUrl-dark: url('../../assets/images/bg-mobile-dark.jpg');
+  /* Light theme */
+  --mainBgColor-light: var(--bg-light);
+  --mainTextColor-light: #000;
+  --mainSectionBg-light: var(--very-light-gray);
+  --mainHeaderImageUrl-light: url('../../assets/images/bg-desktop-light.jpg');
+  --mainHeaderMobileImageUrl-light: url('../../assets/images/bg-mobile-light.jpg');
+
+  --mainBgColor: var(--mainBgColor-dark);
+  --mainTextColor: var(--mainTextColor-dark);
+  --mainSectionBg: var(--mainSectionBg-dark);
+  --mainHeaderImageUrl: var(--mainHeaderImageUrl-dark);
+  --mainHeaderMobileImageUrl: var(--mainHeaderMobileImageUrl-dark);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.125rem;
+  color: var(--mainTextColor);
+}
+
+.container {
+  padding: 1em;
+  min-height: 100dvh;
+  width: 100%;
+  background: var(--mainHeaderMobileImageUrl);
+  background-color: var(--mainBgColor);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .main-section {
+    padding: 2.3em 0;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    .logo {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2em;
+
+      p {
+        font-size: 1.875rem;
+        font-weight: bolder;
+        color: var(--light-gray);
+      }
+
+      img {
+        width: 1.5em;
+        height: 1.5em;
+        cursor: pointer;
+
+        &:hover {
+          width: 1.6em;
+          height: 1.6em;
+          transition: all 0.5s ease;
+        }
+      }
+    }
+
+    #create-todo {
+      width: 100%;
+      padding: 0.825em 1.4em;
+      border: none;
+      background-color: var(--mainSectionBg);
+      margin-bottom: 1.25rem;
+      border-radius: 0.225rem;
+      color: var(--mainTextColor);
+      font-size: 1rem;
+    }
+
+    .todo-list {
+      background-color: var(--mainSectionBg);
+      border-radius: 0.225rem;
+      width: 100%;
+
+      .list-item-wrapper {
+        list-style: none;
+
+        .todo-list-item {
+          width: 100%;
+          border-bottom: 1px solid var(--dark-gray);
+          padding: 1em 1em;
+          font-size: 1.125rem;
+
+          .checkbox-container {
+            display: block;
+            position: relative;
+            cursor: pointer;
+            padding-left: 2em;
+
+            button {
+              border: none;
+              img {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 0.7rem;
+                width: 0.7rem;
+                cursor: pointer;
+              }
+            }
+
+            input {
+              position: absolute;
+              opacity: 0;
+              cursor: pointer;
+              height: 0;
+              width: 0;
+
+              &:checked ~ .checkmark {
+                background: var(--check-bg);
+
+                &::after {
+                  display: inline-block;
+                }
+              }
+
+              &:hover ~ .checkmark {
+                border-color: var(--check-bg);
+              }
+            }
+
+            .checkmark {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 1.2em;
+              height: 1.2em;
+              border-radius: 50%;
+              border: 1px solid var(--dark-gray);
+              background-color: inherit;
+
+              &:after {
+                content: url('../../assets/images/icon-check.svg');
+                display: none;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
+          }
+        }
+      }
+
+      .todo-list-footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--mainSectionBg);
+        padding: 1.2em 1em;
+        font-size: 0.8rem;
+        color: var(--mainTextColor);
+
+        .todo-list-filter {
+          display: none;
+        }
+
+        .clear-completed {
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+
+    .filter-item {
+      margin: 0 0.6em;
+      color: var(--mainTextColor);
+      font-size: 1rem;
+      font-weight: 400;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &.active {
+        color: var(--primary-blue);
+      }
+    }
+
+    .todo-list-filter-mobile {
+      width: 100%;
+      margin-top: 1rem;
+      background-color: var(--mainSectionBg);
+      padding: 1em 1em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.225rem;
+    }
+  }
+}
+
+.attribution {
+  font-size: 0.688rem;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 1em;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .container {
+    background: var(--mainHeaderImageUrl);
+    background-color: var(--mainBgColor);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@media only screen and (min-width: 815px) {
+  .container {
+    .main-section {
+      width: 80%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    .main-section {
+      width: 40%;
+      margin-top: 5rem;
+      .todo-list {
+        .todo-list-footer {
+          .todo-list-filter {
+            display: inline-block;
+          }
+        }
+      }
+      .filter-item {
+        font-size: 0.8rem;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      .todo-list-filter-mobile {
+        display: none;
+      }
+    }
+  }
+}
