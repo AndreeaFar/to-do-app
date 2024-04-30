@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [](https://to-do-list-applications.netlify.app/)
+- Live Site URL: [https://to-do-list-applications.netlify.app/]
 
 ### Built with
 
