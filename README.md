@@ -27,12 +27,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./assets/images/todo-dark.png)
-![](./assets/images/todo-light.png)
+![](./dist/assets/images/todo-dark.png)
+![](./dist/assets/images/todo-light.png)
 
 ### Links
 
-- Live Site URL: []()
+- Live Site URL: [](https://to-do-list-applications.netlify.app/)
 
 ### Built with
 
