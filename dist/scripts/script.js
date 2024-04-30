@@ -25,7 +25,7 @@ function addTodo(e) {
     <label class="checkbox-container"
       >${input.value}<input class="remember" type="checkbox" />
       <span class="checkmark"></span>
-      <button><img class="delete-todo" src="../assets/images/icon-cross.svg" alt="" /></button>
+      <button><img class="delete-todo" src="./assets/images/icon-cross.svg" alt="" /></button>
     </label>`;
 
     ul.appendChild(li);

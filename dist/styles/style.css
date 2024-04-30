@@ -21,14 +21,14 @@
   --mainBgColor-dark: var(--bg-dark);
   --mainTextColor-dark: var(--light-gray);
   --mainSectionBg-dark: var(--dark-blue);
-  --mainHeaderImageUrl-dark: url('../../assets/images/bg-desktop-dark.jpg');
-  --mainHeaderMobileImageUrl-dark: url('../../assets/images/bg-mobile-dark.jpg');
+  --mainHeaderImageUrl-dark: url('../assets/images/bg-desktop-dark.jpg');
+  --mainHeaderMobileImageUrl-dark: url('../assets/images/bg-mobile-dark.jpg');
   /* Light theme */
   --mainBgColor-light: var(--bg-light);
   --mainTextColor-light: #000;
   --mainSectionBg-light: var(--very-light-gray);
-  --mainHeaderImageUrl-light: url('../../assets/images/bg-desktop-light.jpg');
-  --mainHeaderMobileImageUrl-light: url('../../assets/images/bg-mobile-light.jpg');
+  --mainHeaderImageUrl-light: url('../assets/images/bg-desktop-light.jpg');
+  --mainHeaderMobileImageUrl-light: url('../assets/images/bg-mobile-light.jpg');
 
   --mainBgColor: var(--mainBgColor-dark);
   --mainTextColor: var(--mainTextColor-dark);
